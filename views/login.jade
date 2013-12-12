@@ -1,0 +1,14 @@
+html
+	head
+		include head
+	body
+		include header
+		div.container
+			form(rol="form" method="post").form-signin
+				if error
+					div.alert.alert-danger.well-sm #{error}
+				h2.form-signin-heading 用户登录
+				input(type="text" placeholder="用户名" required name="username").form-control
+				input(type="password" placeholder="密码" required name="password").form-control
+				button(type="submit").btn.btn-primary.btn-lg.btn-block 登录
+		include footer

@@ -1,0 +1,15 @@
+html
+	head
+		include head
+	body
+		include header
+		div.container
+			form(rol="form" method="post").form-signin
+				if error
+					div.alert.alert-danger.well-sm #{error}
+				h2.form-signin-heading 用户注册
+				input(type="text" placeholder="用户名" required autofocus name="username").form-control
+				input(type="password" placeholder="密码" required name="password").form-control
+				input(type="password" placeholder="确认密码" required name="password-repeat").form-control
+				button(type="submit").btn.btn-primary.btn-lg.btn-block 注册
+		include footer

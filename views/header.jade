@@ -1,0 +1,21 @@
+div.navbar.navbar-inverse.navbar-fixed-top
+	div.container
+		div.navbar-header
+			button(type="button" data-toggle="collapse" data-target=".navbar-collapse").navbar-toggle 
+				span.sr-only Toggle navigation
+				span.icon-bar
+				span.icon-bar
+				span.icon-bar
+			a(href="/").navbar-brand MicroBlog
+		div.navbar-collapse.collapse.small
+			ul.nav.navbar-nav.navbar-right
+				if !user
+					li
+						a(href="/login") 登录
+					li
+						a(href="/reg") 注册
+				else
+					li
+						a(href="/u/#{user.name}") #{user.name}
+					li
+						a(href="/logout") 退出

@@ -1,0 +1,34 @@
+html
+	head
+		include head
+	body
+		include header
+		if success
+			div.alert.alert-container
+				div.alert alert-success #{success}
+		if error
+			div.alert.alert-container
+				div.alert alert-danger #{error})
+		if !user
+			div.jumbotron
+				div.container
+					h1 欢迎来到MicroBlog
+					p MicroBlog是一个基于Node.js的微博系统。
+					p
+						a(href="/login").btn.btn-primary 登录
+						| 
+						a(href="/reg").btn.btn-default 立即注册
+		else
+			include publish
+
+		div.container
+			div.row
+				each post in posts
+					div.col-md-4
+						h2
+							a(href="/u/#{post.user}") #{post.user}
+							|说：
+						p
+							small.text-muted #{post.time}
+						p #{post.post}
+		include footer

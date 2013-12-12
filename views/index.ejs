@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include head.ejs %>
+	</head>
+<body>
+	<%- include header.ejs %>
+
+
+	<% if(success){ %>
+	<div class="container alert-container">
+		<div class="alert alert-success"><%= success %></div>
+	</div>
+	<% } %>
+
+	<% if(error){ %>
+	<div class="container alert-container">
+		<div class="alert alert-danger"><%= error %></div>
+	</div>
+	<% } %>
+
+	<% if(!user){ %>
+	<!-- Main jumbotron for a primary marketing message or call to action -->
+	<div class="jumbotron">
+		<div class="container">
+			<h1>欢迎来到MicroBlog</h1>
+			<p>Microblog 是一个基于 Node.js 的微博系统。</p>
+			<p><a class="btn btn-primary" href="/login">登录</a> <a class="btn btn-default" href="/reg">立即注册</a></p>
+		</div>
+	</div>
+	<% }else{ %>
+	<%- include publish.ejs %>
+	<% } %>
+
+	<div class="container">
+		<!-- Example row of columns -->
+		<div class="row">
+			<% posts.forEach(function(post, index){ %>
+
+			<div class="col-md-4">
+				<h2><a href="/u/<%= post.user %>"><%= post.user %></a> 说：</h2>
+				<p><small class="text-muted"><%= post.time %></small></p>
+				<p><%= post.post %></p>
+			</div>
+
+			<% }) %>
+		</div>
+	</div>
+
+	<%- include footer.ejs %>
+</body>
+</html>

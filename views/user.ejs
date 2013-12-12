@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include head.ejs %>
+	</head>
+<body>
+	<%- include header.ejs %>
+
+	<% if(user && user.name == username){ %>
+	<%- include publish.ejs %>
+	<% } %>
+
+	<div class="container">
+		<!-- Example row of columns -->
+		<div class="row">
+			<% posts.forEach(function(post, index){ %>
+
+			<div class="col-md-4">
+				<h2><a href="/u/<%= post.user %>"><%= post.user %></a> 说：</h2>
+				<p><small class="text-muted"><%= post.time %></small></p>
+				<p><%= post.post %></p>
+			</div>
+
+			<% }) %>
+
+		</div>
+	</div>
+
+	<%- include footer.ejs %>
+</body>
+</html>

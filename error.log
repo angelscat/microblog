@@ -1,0 +1,88 @@
+﻿[Thu Dec 05 2013 18:30:50 GMT+0800 (中国标准时间)] /
+Error: An new error for test purposes.
+    at exports.index (E:\nodejs\microblog\routes\index.js:18:8)
+    at callbacks (E:\nodejs\microblog\node_modules\express\lib\router\index.js:164:37)
+    at param (E:\nodejs\microblog\node_modules\express\lib\router\index.js:138:11)
+    at pass (E:\nodejs\microblog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (E:\nodejs\microblog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (E:\nodejs\microblog\node_modules\express\lib\router\index.js:33:10)
+    at next (E:\nodejs\microblog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.app.use.meta [as handle] (E:\nodejs\microblog\app.js:62:2)
+    at next (E:\nodejs\microblog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at next (E:\nodejs\microblog\node_modules\express\node_modules\connect\lib\middleware\session.js:318:9)
+[Thu Dec 05 2013 18:32:12 GMT+0800 (中国标准时间)] /
+Error: An new error for test purposes.
+    at exports.index (E:\nodejs\microblog\routes\index.js:18:8)
+    at callbacks (E:\nodejs\microblog\node_modules\express\lib\router\index.js:164:37)
+    at param (E:\nodejs\microblog\node_modules\express\lib\router\index.js:138:11)
+    at pass (E:\nodejs\microblog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (E:\nodejs\microblog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (E:\nodejs\microblog\node_modules\express\lib\router\index.js:33:10)
+    at next (E:\nodejs\microblog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.app.use.meta [as handle] (E:\nodejs\microblog\app.js:62:2)
+    at next (E:\nodejs\microblog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at next (E:\nodejs\microblog\node_modules\express\node_modules\connect\lib\middleware\session.js:318:9)
+[Thu Dec 05 2013 18:33:49 GMT+0800 (中国标准时间)] /
+Error: An new error for test purposes.
+    at exports.index (E:\nodejs\microblog\routes\index.js:18:8)
+    at callbacks (E:\nodejs\microblog\node_modules\express\lib\router\index.js:164:37)
+    at param (E:\nodejs\microblog\node_modules\express\lib\router\index.js:138:11)
+    at pass (E:\nodejs\microblog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (E:\nodejs\microblog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (E:\nodejs\microblog\node_modules\express\lib\router\index.js:33:10)
+    at next (E:\nodejs\microblog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.app.use.meta [as handle] (E:\nodejs\microblog\app.js:62:2)
+    at next (E:\nodejs\microblog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at next (E:\nodejs\microblog\node_modules\express\node_modules\connect\lib\middleware\session.js:318:9)
+[Fri Dec 06 2013 15:28:45 GMT+0800 (中国标准时间)] /
+Error: db object already connecting, open cannot be called multiple times
+    at Db.open (E:\nodejs\microblog\node_modules\mongodb\lib\mongodb\db.js:246:11)
+    at Function.get (E:\nodejs\microblog\models\post.js:45:10)
+    at exports.index (E:\nodejs\microblog\routes\index.js:7:7)
+    at callbacks (E:\nodejs\microblog\node_modules\express\lib\router\index.js:164:37)
+    at param (E:\nodejs\microblog\node_modules\express\lib\router\index.js:138:11)
+    at pass (E:\nodejs\microblog\node_modules\express\lib\router\index.js:145:5)
+    at Router._dispatch (E:\nodejs\microblog\node_modules\express\lib\router\index.js:173:5)
+    at Object.router (E:\nodejs\microblog\node_modules\express\lib\router\index.js:33:10)
+    at next (E:\nodejs\microblog\node_modules\express\node_modules\connect\lib\proto.js:193:15)
+    at Object.app.use.meta [as handle] (E:\nodejs\microblog\app.js:62:2)
+[Fri Dec 06 2013 17:46:36 GMT+0800 (中国标准时间)] /
+Error: E:\nodejs\microblog\views\index.jade:3
+    1| html
+    2| 	head
+  > 3| 		include head
+    4| 	body
+    5| 		include header
+    6| 		if success
+
+ENOENT, no such file or directory 'E:\nodejs\microblog\views\head.jade'
+    at Object.fs.openSync (fs.js:427:18)
+    at Object.fs.readFileSync (fs.js:284:15)
+    at Object.Parser.parseInclude (E:\nodejs\microblog\node_modules\jade\lib\parser.js:491:18)
+    at Object.Parser.parseExpr (E:\nodejs\microblog\node_modules\jade\lib\parser.js:213:21)
+    at Object.Parser.block (E:\nodejs\microblog\node_modules\jade\lib\parser.js:593:25)
+    at Object.Parser.tag (E:\nodejs\microblog\node_modules\jade\lib\parser.js:722:26)
+    at Object.Parser.parseTag (E:\nodejs\microblog\node_modules\jade\lib\parser.js:625:17)
+    at Object.Parser.parseExpr (E:\nodejs\microblog\node_modules\jade\lib\parser.js:199:21)
+    at Object.Parser.block (E:\nodejs\microblog\node_modules\jade\lib\parser.js:593:25)
+    at Object.Parser.tag (E:\nodejs\microblog\node_modules\jade\lib\parser.js:722:26)
+[Fri Dec 06 2013 17:57:20 GMT+0800 (中国标准时间)] /
+Error: E:\nodejs\microblog\views\index.jade:21
+    19| 						a(href="/reg").btn btn-default 立即注册
+    20| 		else
+  > 21| 			include publish
+    22| 			
+    23| 		div.container
+    24| 			div.row
+
+ENOENT, no such file or directory 'E:\nodejs\microblog\views\publish.jade'
+    at Object.fs.openSync (fs.js:427:18)
+    at Object.fs.readFileSync (fs.js:284:15)
+    at Object.Parser.parseInclude (E:\nodejs\microblog\node_modules\jade\lib\parser.js:491:18)
+    at Object.Parser.parseExpr (E:\nodejs\microblog\node_modules\jade\lib\parser.js:213:21)
+    at Object.Parser.block (E:\nodejs\microblog\node_modules\jade\lib\parser.js:593:25)
+    at Object.Parser.parseCode (E:\nodejs\microblog\node_modules\jade\lib\parser.js:315:25)
+    at Object.Parser.parseExpr (E:\nodejs\microblog\node_modules\jade\lib\parser.js:225:21)
+    at Object.Parser.block (E:\nodejs\microblog\node_modules\jade\lib\parser.js:593:25)
+    at Object.Parser.tag (E:\nodejs\microblog\node_modules\jade\lib\parser.js:722:26)
+    at Object.Parser.parseTag (E:\nodejs\microblog\node_modules\jade\lib\parser.js:625:17)

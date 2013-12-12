@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<%- include head.ejs %>
+	</head>
+<body>
+	<%- include header.ejs %>
+
+	<div class="container">
+		<form class="form-signin" role="form" method="post">
+			<% if(error) { %>
+			<div class="alert alert-danger well-sm"><%= error %></div>
+			<% } %>
+			<h2 class="form-signin-heading">用户注册</h2>
+			<input type="text" class="form-control" placeholder="用户名" required autofocus name="username">
+			<input type="password" class="form-control" placeholder="密码" required name="password">
+			<input type="password" class="form-control" placeholder="确认密码" required name="password-repeat">
+			<button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+		</form>
+	</div>
+
+	<%- include footer.ejs %>
+</body>
+</html>
